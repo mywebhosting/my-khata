@@ -1,4 +1,6 @@
 # my-khata
 Track your credit
 
-###### > **Design and Developed by _Subhajit Dey_**
+>This app help you who take credit from you, with reminder
+
+###### **Design and Developed by _Subhajit Dey_**
