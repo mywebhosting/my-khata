@@ -1,4 +1,4 @@
 # my-khata
 Track your credit
 
-###### > **Design and Developed by __Subhajit Dey__**
+###### > **Design and Developed by _Subhajit Dey_**
