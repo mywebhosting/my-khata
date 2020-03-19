@@ -1,0 +1,101 @@
+.checkbox input[type="checkbox"]
+{
+	outline: none;
+}
+
+.login-panel
+{
+	background-image: linear-gradient(to bottom right, #64bbce, #fcfffc);
+}
+
+.login:focus
+{
+	outline: none;
+}
+
+.panel-heading
+{
+	background-image: linear-gradient(to bottom right, #5e8cd1, #d2e4d6);
+	border-bottom: 2px solid #473d3d !important;
+}
+
+.forget-pwd
+{
+	font-size: 12px;
+	color: #fc6e6e;
+	float: right;
+	cursor: pointer;
+}
+
+.copy-right
+{
+	font-size: 12px;
+	float: left;
+}
+
+.powered-by
+{
+	font-size: 12px;
+	float: right;
+}
+
+.powered-by i
+{
+	color: #431eba;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.message
+{
+	color: #f8f8f8;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 3px 3px 5px #333;
+    display: none;
+}
+
+.show_hide_pwd
+{
+    cursor: pointer;
+}
+
+/*.error_message:before
+{
+	content: "";
+    padding: 4px;
+    border-radius: 10px;
+    background: red;
+    display: inline-block;
+    margin-right: 5px;
+}*/
+
+.message.red:before
+{
+	content: "";
+    padding: 4px;
+    border-radius: 10px;
+    background: #fd0000;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.message.green:before
+{
+	content: "";
+    padding: 4px;
+    border-radius: 10px;
+    background: #00fd00;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.message.blue:before
+{
+	content: "";
+    padding: 4px;
+    border-radius: 10px;
+    background: #1c7aa9;
+    display: inline-block;
+    margin-right: 5px;
+}

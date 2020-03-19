@@ -1,0 +1,212 @@
+:root
+{
+	--content_background_color: #29f0a24d;
+}
+
+.sidebar
+{
+	min-height: 570px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.navbar-default
+{
+    background-color: #222;
+}
+
+.nav > li > a
+{
+	color: white;
+	outline: none;
+}
+
+.sidebar ul li a.active
+{
+	background-color: #4a4545;
+}
+
+.sidebar ul li 
+{
+    border-bottom: 1px solid #80bf64;
+}
+
+.nav > li > a:focus, .nav > li > a:hover
+{
+	background-color: #4a4545;
+	color: white;
+}
+
+#page-wrapper
+{
+    padding-top: 30px;
+    min-height: 568px;
+    /*background-color: #29f0a24d;*/
+    background-color: var(--content_background_color);
+}
+
+.footer
+{
+	margin-top: 20px;
+	background-color: black;
+	color: white;
+	bottom: 0px;
+	position: relative;
+	width: 100%;
+}
+
+.page-header
+{
+	border-bottom: 1px solid #000;
+}
+
+.dropdown-menu
+{
+	background-color: black;
+	color: white;
+}
+
+.dropdown-menu>li>a
+{
+	color: inherit;
+}
+
+.text-muted
+{
+	color: #989090;
+}
+
+/*File attachment design start*/
+.file_attach_label
+{
+	padding: 10px;
+	background-color: var(--content_background_color);
+	border-radius: 8px;
+	font-weight: 502;
+	cursor: pointer;
+}
+
+#file_attach
+{
+	display: none;
+}
+/*File attachment design stop*/
+
+/*Customize notification*/
+.custom-notification-div
+{
+	width: auto;
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+	z-index: 100;
+	font-size: 12px;
+	font-weight: bold;
+	animation: mymove 2s;
+  	animation-fill-mode: forwards;
+  	text-transform: capitalize;
+}
+
+@keyframes mymove {
+	from {right: -200px;}
+	to {right: 20px;}
+}
+
+.alert-success-myalert
+{
+	min-width: 210px;
+	min-height: 40px;
+	/*background-color: #cef2c0;*/
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: baseline;
+	display: flex;
+
+	background-color: #231b1b;
+	color: white;
+}
+
+.point-success
+{
+	height: 8px;
+	width: 8px;
+	background-color: #10d74a;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.green:before
+{
+	content: "";
+    background-color: #59c734;
+    padding: 4px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.red:before
+{
+	content: "";
+    background-color: red;
+    padding: 4px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.yellow:before
+{
+	content: "";
+    background-color: #f5f000;
+    padding: 4px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.alert-message
+{
+	padding-left: 5px;
+}
+/*Customize notification End*/
+
+/*Scroll bar code*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(197, 164, 164);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #77bbf5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #80baea;
+}
+
+
+/*input type number change style*/
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
