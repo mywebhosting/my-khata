@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>YOO! Pos - Counter Admin </title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="include/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="include/css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="include/css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="include/css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="include/css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="include/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- All Page custom design -->
+        <link href="include/css/customize/all_page.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">My Khata</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown navbar-inverse">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i> New Task
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    Menu
+                                </div>
+                                <!-- /input-group -->
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Create<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="customer_list.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Create Customer</a>
+                                    </li>
+                                    <li>
+                                        <a href="item_create.html"><i class="fa fa-cart-plus" aria-hidden="true"></i> Create Item</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <!-- <a href="credit.html"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit</a> -->
+                                <a href="#"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="create_credit.html"><i class="fa fa-plus-square" aria-hidden="true"></i> New Credit</a>
+                                    </li>
+                                    <li>
+                                        <a href="credit.html"><i class="fa fa-eye" aria-hidden="true"></i> View All Credit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <!-- <a href="payment.html"><i class="fa fa-inr" aria-hidden="true"></i> Payment</a> -->
+                                <a href="#"><i class="fa fa-inr" aria-hidden="true"></i> Payment<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="payment.html"><i class="fa fa-money" aria-hidden="true"></i> Make New Payment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-history" aria-hidden="true"></i> View All Payment History</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                        <div class="footer">
+                            <div class="row">
+                                <span class="col-md-12">&copy; My Khata</span>
+                            </div>
+                            <div class="row">
+                                <span class="col-md-12">Powered By <i>Subhajit Dey</i></span>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Create Customer</h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Customer Details
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel tabbed-panel panel-primary">
+                                        <div class="panel-heading clearfix">
+                                            <div class="panel-title pull-left">Enter customer details &nbsp;&nbsp;&nbsp;</div>
+                                            <!-- <div class="pull-right"> -->
+                                            <div class="pull-left">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#tab-primary-1" data-toggle="tab">Basic Details</a></li>
+                                                    <li><a href="#tab-primary-2" data-toggle="tab">Identification</a></li>
+                                                    <li><a href="#tab-primary-3" data-toggle="tab">Payment Method</a></li>
+                                                    <!-- <li class="dropdown">
+                                                        <a href="#" data-toggle="dropdown">More <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#tab-primary-4" data-toggle="tab">Page 4</a></li>
+                                                            <li><a href="#tab-primary-5" data-toggle="tab">Page 5</a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active" id="tab-primary-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>Enter full name</label>
+                                                                <input class="form-control" placeholder="First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>&nbsp;</label>
+                                                                <input class="form-control" placeholder="Second Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>&nbsp;</label>
+                                                                <input class="form-control" placeholder="Last Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Permanent Address</label>
+                                                                <textarea class="form-control" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Altanative Address</label>
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" value=""> Same as permanent address
+                                                                    </label>
+                                                                </div>
+                                                                <textarea class="form-control" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Phone Number</label>
+                                                                <input type="number" class="form-control" placeholder="Phone number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>Verify phone number</label>                            
+                                                                        <input type="password" class="form-control" placeholder="Enter OTP">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>&nbsp;</label>                            
+                                                                        <div>
+                                                                            <button type="submit" class="btn btn-success">Send OTP this number</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Email Id</label>
+                                                                <input type="number" class="form-control" placeholder="Email ID">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>Verify Email Id</label>                            
+                                                                        <input type="password" class="form-control" placeholder="Enter OTP">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>&nbsp;</label>                            
+                                                                        <div>
+                                                                            <button type="submit" class="btn btn-success">Send OTP this email id</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                    
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <button type="submit" class="btn btn-info pull-right">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                
+                                                <div class="tab-pane fade" id="tab-primary-2">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="form-group">
+                                                                <label>Check the govorment document: &nbsp;</label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio">Voter Card
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio">Driving Licence
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio">Pan Card
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="form-group">
+                                                                <label>Attach document image</label> <br />
+                                                                <label class="file_attach_label">
+                                                                    Choose File
+                                                                    <input type="file" id="file_attach">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab-primary-3">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Payment method</label>
+                                                                <select class="form-control">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab-primary-4">Page 4</div>
+                                                <div class="tab-pane fade" id="tab-primary-5">Page 5</div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <button type="submit" class="btn btn-info pull-right">Create Customer</button>
+                                    <!-- /.panel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->                    
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="include/js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="include/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="include/js/metisMenu.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="include/js/startmin.js"></script>
+
+    </body>
+</html>

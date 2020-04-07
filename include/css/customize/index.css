@@ -1,0 +1,434 @@
+*
+{
+	border: 0px;
+	margin: 0px auto;
+	font-family: 'Alegreya', serif;
+}
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	background-color: #03f6cb1a;
+	background: url('../../image/background.gif');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.slider
+{
+	height: 400px;
+	/*background-color: red;*/
+}
+
+.gap
+{
+	content: "";
+	width: 100%;
+	height: 200px;
+	/*background-color: cyan;*/
+
+}
+
+.why_us
+{
+	background-color: #000;
+	min-height: 200px;
+	position: relative;
+	padding-top: 25px;
+	color: white;
+}
+
+.why_us:before
+{
+	content: "";
+	background-color: #000;
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	padding: 30px 0px;
+	top: -30px;
+	transform: rotate(-2deg);
+}
+
+.why_us:after
+{
+	content: "";
+	background-color: #000;
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	padding: 30px 0px;
+	top: -30px;
+	transform: rotate(2deg);
+}
+
+.why_us_title
+{
+	font-size: 22px;
+}
+
+.why_us_title > hr
+{
+	width: 15%;
+	padding: 1px;
+	border: 1px dashed #fcfcfc;
+	box-shadow: 0px 0px 5px #fffdfd80;
+}
+
+.why_us_content
+{
+	margin-bottom: 100px;
+}
+
+.who_title
+{
+	font-size: 22px;
+}
+
+.who_title > hr
+{
+	width: 20%;
+	padding: 1px;
+	border: 1px dashed #fcfcfc;
+	box-shadow: 0px 0px 5px #fffdfd80;
+}
+
+.who_content
+{
+	margin-bottom: 90px;
+}
+
+.shopkeeper
+{
+	width: 90%;
+	height: 100px;
+	background-color: #ffffffb3;
+	border-radius: 20px;
+	border: 2px dotted black;
+	cursor: pointer;
+	padding: 30px;
+	color: black;
+	font-size: 22px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.shopkeeper:hover
+{
+	
+	/*animation-name: shadow;
+  	animation-duration: 2s;*/
+  	animation: shadow 3s;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes shadow
+{
+	0%   {box-shadow: 0px 0px 12px #a2f600;}
+	25%  {box-shadow: 5px 6px 12px #11c55f;}
+	50%  {box-shadow: 4px -6px 12px #2c63e9;}
+	75%  {box-shadow: -4px -6px 12px #9d6ff9;}
+	90%  {box-shadow: -4px 6px 12px #cf94e9;}
+	100% {box-shadow: 0px 0px 12px #a2f600;}
+}
+
+.buyer
+{
+	width: 90%;
+	height: 100px;
+	background-color: #ffffffb3;
+	border-radius: 20px;
+	border: 2px dotted black;
+	cursor: pointer;
+	padding: 30px;
+	color: black;
+	font-size: 22px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.buyer:hover
+{
+	animation: shadowbuyer 3s;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes shadowbuyer
+{
+	0%   {box-shadow: 0px 0px 12px #a2f600;}
+	25%  {box-shadow: -4px 0px 12px #11c55f;}
+	50%  {box-shadow: 4px -6px 12px #2c63e9;}
+	75%  {box-shadow: 4px 6px 12px #9d6ff9;}
+	90%  {box-shadow: 2px 6px 12px #cf94e9;}
+	100% {box-shadow: 0px 0px 12px #a2f600;}
+}
+
+.gap_2
+{
+	width: 100%;
+	height: 200px;
+	background-color: transparent;
+}
+
+.findmeon
+{
+	width: 100%;
+	min-height: 200px;
+	background-color: #000;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+}
+
+/*.findmeon:before
+{
+	content: "";
+	background-color: #000;
+	width: 100%;
+	padding: 20px;
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	transform: rotate(4deg);
+}
+
+.findmeon:after
+{
+	content: "";
+	background-color: #000;
+	width: 100%;
+	padding: 20px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	transform: rotate(-4deg);
+}*/
+
+.find_us_title
+{
+	font-size: 22px;
+}
+
+.find_us_title > hr
+{
+	width: 15%;
+	padding: 1px;
+	border: 1px dashed #fcfcfc;
+	box-shadow: 0px 0px 5px #fffdfd80;
+}
+
+.find_us_content
+{
+	margin-bottom: 50px;
+}
+
+.website
+{
+	font-size: 30px;
+	cursor: pointer;
+	float: left;
+}
+
+.website:hover
+{
+	color: #b0c9f5;
+}
+
+.desktop
+{
+	font-size: 28px;
+	cursor: pointer;
+	float: left;
+}
+
+.desktop:hover
+{
+	color: #b0c9f5;
+}
+
+.mobile
+{
+	font-size: 35px;
+	cursor: pointer;
+	float: left;
+	margin-top: -7px;
+}
+
+.mobile:hover
+{
+	color: #b0c9f5;
+}
+
+.gap_3
+{
+	width: 100%;
+	height: 300px;
+	background-color: #03f6cb1a;
+	background: url('../../image/contactus.jpg');
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.form
+{
+	background-color: #ffffffb3;
+    border: 2px solid #c0f0f2;
+    border-radius: 10px;
+    padding: 15px 0px;
+}
+
+.form .col
+{
+	padding: 20px 30px;
+}
+
+.form .col input[type=text],textarea
+{
+	width: 100%;
+	background-color: #fff0;
+	border-bottom: 2px solid #4863f2;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 5px 10px;
+	height: 20px;
+	float: left;
+}
+
+.form .col textarea
+{
+	height: 90px;
+	max-height: 90px;
+	width: 100%;
+	max-width: 100%;
+}
+
+.form .col button
+{
+	padding: 5px 30px;
+	border-radius: 20px;
+	font-weight: bold;
+	background: transparent;
+	border: 3px dotted #a011d5;
+	outline: none;
+	transition: 2s;
+}
+
+.form .col button:hover
+{
+	border: 3px solid #a011d5;
+	box-shadow: 0px 0px 15px #2100ff;
+	transition: 1s;
+}
+
+input[type=text], textarea::placeholder
+{
+	font-weight: bold;
+}
+
+.mandatory::placeholder
+{
+	color: #fe0000;
+	font-weight: bold;
+	position: relative;
+}
+
+.error_msg span
+{
+	color: red;
+	float: right;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.error_msg span:before
+{
+	content: "";
+	padding: 4px;
+	border-radius: 20px;
+	background-color: red;
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.success_msg span
+{
+	color: #267535;
+	float: right;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.success_msg span:before
+{
+	content: "";
+	padding: 4px;
+	border-radius: 20px;
+	background-color: #1bf043;
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.verify span
+{
+	color: #0d6e9b;
+	float: right;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.verify span:before
+{
+	content: "";
+	padding: 4px;
+	border-radius: 20px;
+	background-color: #006fff;;
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.gap_4
+{
+	width: 100%;
+	height: 10px;
+	background-color: #03f6cb1a;
+}
+
+footer
+{
+	width: 100%;
+	/*height: 60px;*/
+	padding: 20px 10px;
+	background-color: #181717;
+	color: white;
+}
+
+.copyright span
+{
+	font-size: 15px;
+}
+
+.develop span
+{
+	text-transform: capitalize;
+	float: right;
+}
+
+.develop span a
+{
+	color: #7fcccf;
+	font-style: italic;
+}
+
+.develop span a:hover
+{
+	text-decoration: none;
+}

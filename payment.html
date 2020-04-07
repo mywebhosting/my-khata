@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>YOO! Pos - Counter Admin </title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="include/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="include/css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="include/css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="include/css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="include/css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="include/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- All Page custom design -->
+        <link href="include/css/customize/all_page.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">My Khata</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown navbar-inverse">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i> New Task
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    Menu
+                                </div>
+                                <!-- /input-group -->
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Create<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="customer_list.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Create Customer</a>
+                                    </li>
+                                    <li>
+                                        <a href="item_create.html"><i class="fa fa-cart-plus" aria-hidden="true"></i> Create Item</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <!-- <a href="credit.html"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit</a> -->
+                                <a href="#"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="create_credit.html"><i class="fa fa-plus-square" aria-hidden="true"></i> New Credit</a>
+                                    </li>
+                                    <li>
+                                        <a href="credit.html"><i class="fa fa-eye" aria-hidden="true"></i> View All Credit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <!-- <a href="payment.html"><i class="fa fa-inr" aria-hidden="true"></i> Payment</a> -->
+                                <a href="#"><i class="fa fa-inr" aria-hidden="true"></i> Payment<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="payment.html"><i class="fa fa-money" aria-hidden="true"></i> Make New Payment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-history" aria-hidden="true"></i> View All Payment History</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                        <div class="footer">
+                            <div class="row">
+                                <span class="col-md-12">&copy; My Khata</span>
+                            </div>
+                            <div class="row">
+                                <span class="col-md-12">Powered By <i>Subhajit Dey</i></span>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Transaction</h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Transaction Modification
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <label>Choose holder</label>
+                                                    <select class="form-control">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                        <option value="">5</option>
+                                                        <option class="create_holder">Create new holder</option>
+                                                    </select>
+                                                    <p class="help-block">Who paid? choose here</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Choose event</label>
+                                                    <select class="form-control">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                        <option value="">5</option>
+                                                        <option class="create_holder">Create new event</option>
+                                                    </select>
+                                                    <p class="help-block">Why you get money</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Enter amount</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-eur"></i>
+                                                        </span>
+                                                        <input type="text" class="form-control" placeholder="00.00">
+                                                    </div>
+                                                    <p class="help-block">Enter paid amount</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Status</label>
+                                                    <select class="form-control" disabled>
+                                                        <option value="">Active. Frthure payment</option>
+                                                        <option value="">Inactive. Not get any payment.</option>
+                                                    </select>
+                                                    <p class="help-block">This event status</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Status notes</label>
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                    <p class="help-block">If you need some text</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">Accept payment and check payment details.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-danger">Cancel this payment</button>
+                                                    <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Save and submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-lg-6">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="hero-widget well well-sm">
+                                                        <div class="icon">
+                                                            <i class="glyphicon glyphicon-user"></i>
+                                                        </div>
+                                                        <div class="text">
+                                                            <label class="text-muted">Hero Widget</label>
+                                                        </div>
+                                                        <div class="options">
+                                                            <a href="javascript:;" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-plus"></i> Goto profile</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label>Current pay</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="00.00" disabled>
+                                                        </div>
+                                                        <p class="help-block">Now pay</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-1">
+                                                    <div class="form-group">
+                                                        <label>&nbsp;</label>
+                                                        <div class="input-group">
+                                                            +
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label>Paid</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="00.00" disabled>
+                                                        </div>
+                                                        <p class="help-block">Previously paid</p>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="col-lg-1">
+                                                    <div class="form-group">
+                                                        <label>&nbsp;</label>
+                                                        <div class="input-group">
+                                                            =
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>Dew</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="00.00" disabled>
+                                                        </div>
+                                                        <p class="help-block">Need to be paid</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Remark</label>
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                        <p class="help-block">If you need some text</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Transaction History of {holder name}
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="timeline">
+                                        <li>
+                                            <div class="timeline-badge"><i class="fa fa-check"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+
+                                                    <p>
+                                                        <small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via
+                                                            Twitter
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                                                        laboriosam
+                                                        dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est
+                                                        cum
+                                                        veniam excepturi. Maiores praesentium, porro voluptas suscipit facere
+                                                        rem
+                                                        dicta, debitis.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem
+                                                        quibusdam, tenetur commodi provident cumque magni voluptatem libero,
+                                                        quis
+                                                        rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia
+                                                        repellendus.</p>
+
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+                                                        maiores
+                                                        odit qui est tempora eos, nostrum provident explicabo dignissimos
+                                                        debitis
+                                                        vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
+                                                        numquam
+                                                        facilis enim eaque, tenetur nam id qui vel velit similique nihil iure
+                                                        molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est
+                                                        quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias
+                                                        sapiente
+                                                        rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut
+                                                        debitis!</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-badge info"><i class="fa fa-save"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus
+                                                        modi
+                                                        quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam
+                                                        debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
+                                                    <hr>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
+                                                                data-toggle="dropdown">
+                                                            <i class="fa fa-gear"></i> <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Action</a>
+                                                            </li>
+                                                            <li><a href="#">Another action</a>
+                                                            </li>
+                                                            <li><a href="#">Something else here</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">Separated link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio
+                                                        quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam.
+                                                        Officia
+                                                        quam qui adipisci quas consequuntur nostrum sequi. Consequuntur,
+                                                        commodi.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-inverted">
+                                            <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
+                                            </div>
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+                                                        obcaecati,
+                                                        quaerat tempore officia voluptas debitis consectetur culpa amet,
+                                                        accusamus
+                                                        dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque
+                                                        eaque.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="include/js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="include/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="include/js/metisMenu.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="include/js/startmin.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+.checkbox input[type="checkbox"]
+{
+	outline: none;
+}
+
+.login-panel
+{
+	background-image: linear-gradient(to bottom right, #64bbce, #fcfffc);
+}
+
+.panel-heading
+{
+	background-image: linear-gradient(to bottom right, #5e8cd1, #d2e4d6);
+	border-bottom: 2px solid #473d3d !important;
+}
+
+.forget-pwd
+{
+	font-size: 12px;
+	color: #fc6e6e;
+	float: right;
+	cursor: pointer;
+}
+
+.copy-right
+{
+	font-size: 12px;
+	float: left;
+}
+
+.powered-by
+{
+	font-size: 12px;
+	float: right;
+}
+
+.powered-by i
+{
+	color: #431eba;
+	cursor: pointer;
+	font-size: 13px;
+}
