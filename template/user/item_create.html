@@ -1,0 +1,105 @@
+{% extends "user/include/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Create Product</h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Product Details
+                                </div>
+                                <form method="POST" enctype="multipart/form-data" return="false">
+                                    {% csrf_token %}
+                                    <div class="panel-body">
+                                        <div class="panel tabbed-panel panel-primary">
+                                            <div class="panel-heading clearfix">
+                                                <div class="panel-title pull-left">Enter Product Details &nbsp;&nbsp;&nbsp;</div>
+                                                <!-- <div class="pull-right"> -->
+                                                <div class="pull-left">
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a href="#tab-primary-1" data-toggle="tab">Basic Details</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade in active" id="tab-primary-1">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label>Enter product name</label>
+                                                                    <input class="form-control product_name" name="name" placeholder="Product Full Name">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label>Enter product quantity type</label>
+                                                                    <select class="form-control qty_type">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="kilogram">Kilogram</option>
+                                                                        <option value="gram">Gram</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label>Enter product quantity</label>
+                                                                    <input class="form-control qty" placeholder="Product Quantity">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label>Enter product price</label>
+                                                                    <input type="number" class="form-control price" placeholder="Product Price">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="file_attach_label">
+                                                                        Choose Product Image
+                                                                        <input type="file" name="upload_product_image" class="product_image_attach" id="file_attach" accept="image/*">
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="form-group">
+                                                                            <label>View Product Image</label><br />
+                                                                            <img src="#" class="product_image" style="height: 75px; width: 150px;">
+                                                                        </div>
+                                                                    </div>                                                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-info pull-right create-item">Create Product</button>
+                                        <div class="loader pull-right"></div>
+                                        <!-- /.panel -->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->                    
+                </div>
+                <!-- /.container-fluid -->
+{% endblock %}
+{% block custom_js %}
+    <script src="{% static 'user/js/customize/create_item.js' %}"></script>
+{% endblock %}

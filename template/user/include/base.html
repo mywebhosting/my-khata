@@ -116,7 +116,7 @@
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> {{ user_name }} <b class="caret"></b>
+                            <i class="fa fa-user fa-fw"></i> {{ user_name|truncatechars:8 }} <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -124,7 +124,7 @@
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -141,16 +141,16 @@
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href="{% url 'dashboard:dashboard' %}" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                                <a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Create<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="customer_list.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Create Customer</a>
+                                        <a href="{% url 'customer:create_customer' %}"><i class="fa fa-user-plus" aria-hidden="true"></i> Create Customer</a>
                                     </li>
                                     <li>
-                                        <a href="item_create.html"><i class="fa fa-cart-plus" aria-hidden="true"></i> Create Item</a>
+                                        <a href="{% url 'item:create_item' %}"><i class="fa fa-cart-plus" aria-hidden="true"></i> Create Item</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -220,6 +220,9 @@
         <!-- Custom Theme JavaScript -->
         <script src="{% static 'user/js/startmin.js' %}"></script>
         <script src="{% static 'user/js/customize/secure_javascript.js' %}"></script>
+
+        {% block custom_js %}
+        {% endblock %}
 
     </body>
 </html>

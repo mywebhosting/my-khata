@@ -1,0 +1,209 @@
+{% extends "user/include/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Create Customer</h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Customer Details
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel tabbed-panel panel-primary">
+                                        <div class="panel-heading clearfix">
+                                            <div class="panel-title pull-left">Enter customer details &nbsp;&nbsp;&nbsp;</div>
+                                            <!-- <div class="pull-right"> -->
+                                            <div class="pull-left">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#tab-primary-1" data-toggle="tab">Basic Details</a></li>
+                                                    <li><a href="#tab-primary-2" data-toggle="tab">Identification</a></li>
+                                                    <li><a href="#tab-primary-3" data-toggle="tab">Payment Method</a></li>
+                                                    <!-- <li class="dropdown">
+                                                        <a href="#" data-toggle="dropdown">More <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#tab-primary-4" data-toggle="tab">Page 4</a></li>
+                                                            <li><a href="#tab-primary-5" data-toggle="tab">Page 5</a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active" id="tab-primary-1">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>Enter full name</label>
+                                                                <input class="form-control" name="first_name" placeholder="First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>&nbsp;</label>
+                                                                <input class="form-control" name="second_name" placeholder="Second Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>&nbsp;</label>
+                                                                <input class="form-control" name="last_name" placeholder="Last Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Permanent Address</label>
+                                                                <textarea class="form-control" name="permanent_address" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Altanative Address</label>
+                                                                <label style="font-weight: normal;">
+                                                                    <input type="checkbox" value=""> Same as permanent address
+                                                                </label>
+                                                                <!-- <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" value=""> Same as permanent address
+                                                                    </label>
+                                                                </div> -->
+                                                                <textarea class="form-control" name="altanative_address" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Phone Number</label>
+                                                                <input type="number" name="phone_no" class="form-control" placeholder="Phone number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>Verify phone number</label>                            
+                                                                        <input type="password" name="phone_no_otp" class="form-control" placeholder="Enter OTP">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>&nbsp;</label>                            
+                                                                        <div>
+                                                                            <button type="submit" name="phone_no_otp_bttn" class="btn btn-success">Send OTP this number</button>
+                                                                            <div class="loader pull-right phone_otp_loader"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Email Id</label>
+                                                                <input type="email" name="email_id" class="form-control" placeholder="Email ID">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>Verify Email Id</label>                            
+                                                                        <input type="password" name="email_id_otp" class="form-control" placeholder="Enter OTP">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label>&nbsp;</label>                            
+                                                                        <div>
+                                                                            <button type="submit" name="email_id_otp_bttn" class="btn btn-success">Send OTP this email id</button>
+                                                                            <div class="loader pull-right email_otp_loader"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                    
+                                                    </div>
+                                                    <!-- <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <button type="submit" class="btn btn-info pull-right">Next</button>
+                                                        </div>
+                                                    </div> -->
+                                                </div>                                                
+                                                <div class="tab-pane fade" id="tab-primary-2">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="form-group">
+                                                                <label>Check the govorment document: &nbsp;</label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio">Voter Card
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio">Driving Licence
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio">Pan Card
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="form-group">
+                                                                <label>Attach document image</label> <br />
+                                                                <label class="file_attach_label">
+                                                                    Choose File
+                                                                    <input type="file" id="file_attach">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab-primary-3">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Payment method</label>
+                                                                <select class="form-control">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab-primary-4">Page 4</div>
+                                                <div class="tab-pane fade" id="tab-primary-5">Page 5</div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="pull-right">
+                                        <div class="loader pull-left create_customer_loader"></div>
+                                        <button type="submit" class="btn btn-info pull-right create_customer">Create Customer</button>
+                                    </div>
+                                    <!-- /.panel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->                    
+                </div>
+                <!-- /.container-fluid -->
+{% endblock %}
+{% block custom_js %}
+    <script src="{% static 'user/js/customize/create_customer.js' %}"></script>
+{% endblock %}

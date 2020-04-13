@@ -35,3 +35,17 @@ class PasswordHash{
 		return modify_password;
 	}
 };
+
+class Loader{
+	constructor(){
+		$(".loader").hide();
+	}
+
+	Show(className="loader"){
+		$("."+className).fadeIn(500);
+	}
+
+	Hide(className="loader"){
+		$("."+className).fadeOut(500);
+	}
+}

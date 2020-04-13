@@ -210,3 +210,30 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance:textfield;
 }
+
+.loader
+{
+	padding: 10px;
+	border: 2px solid #e2d9d9;
+	border-radius: 50px;
+	margin-right: 10px;
+	position: relative;
+	animation: spin 2s ease-in-out infinite;
+	display: none;
+}
+
+.loader:before
+{
+	content: "";
+	padding: 3px;
+	background-color: #202121;
+	position: absolute;
+	top: -4px;
+	border-radius: 50px;
+	border: 2px solid white;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

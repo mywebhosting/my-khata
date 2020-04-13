@@ -1,0 +1,240 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>My Khata - All profit & loss details</title>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'user/css/customize/index.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'user/css/customize/index_responsive.css' %}">
+
+        <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Start WOWSlider.com HEAD section -->
+        <link rel="stylesheet" type="text/css" href="{% static 'slider/engine1/style.css' %}" />
+        <script type="text/javascript" src="{% static 'slider/engine1/jquery.js' %}"></script>
+        <!-- End WOWSlider.com HEAD section -->
+
+        <style type="text/css">
+        	#wowslider-container1 .ws_images
+        	{
+        		max-height: 600px;
+        	}
+
+        	/*.ws-title span
+        	{
+        		transform: translate3d(50.14px, 0px, 0px) !important;
+        		background: #2E322E;
+				opacity: 1;
+				color: #fff;
+				text-shadow: 2px 2px 0px #625757;
+        	}*/
+
+        	#wowslider-container1 .ws-title div, #wowslider-container1 .ws-title span
+        	{
+        		transform: translate3d(50.14px, 0px, 0px) !important;
+        		background: #2E322E;
+				opacity: 1;
+				color: #fff;
+				text-shadow: 2px 2px 0px #625757;
+        	}
+
+        	#wowslider-container1 .ws_images > div > img
+        	{
+        		max-height: 450px;
+        	}
+
+        	.ws_images img
+        	{
+        		width: 100%;
+        		/*height: 500px;*/
+        		object-fit: cover;
+        		background-size: cover;
+        	}
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 slider">
+                    <!-- Start WOWSlider.com BODY section -->
+                    <div id="wowslider-container1">
+                    <div class="ws_images"><ul>
+                            <li><img src="{% static 'slider/data1/images/customerqueuemanagement.png' %}" alt="More Customer Queue?" title="More Customer Queue?" id="wows1_0"/></li>                            
+                            <li><img src="{% static 'slider/data1/images/2.jpg' %}" alt="Make pyment letter" title="Shop now" id="wows1_2"/></li>
+                            <li><img src="{% static 'slider/data1/images/3.jpg' %}" alt="Make pyment letter" title="Make pyment letter" id="wows1_2"/></li>
+                        </ul></div>
+                        <!-- <div class="ws_bullets"><div>
+                            <a href="#" title="More Customer Queue?"><span><img src="slider/data1/tooltips/customerqueuemanagement.png" alt="More Customer Queue?"/>1</span></a>
+                            <a href="#" title="Just open the app and store all data."><span><img src="slider/data1/tooltips/webdevelopmentecommercewebdesignmagentoecommerceposterspngclipartthumbnail.png" alt="Just open the app and store all data."/>2</span></a>
+                            <a href="#" title="Make pyment letter"><span><img src="slider/data1/tooltips/kisspnggrantwritingfundingclipartauction5abafc281b7c60.7781741715222036881126.png" alt="Make pyment letter"/>3</span></a>
+                        </div></div> -->
+                    <div class="ws_shadow"></div>
+                    </div>  
+                    <script type="text/javascript" src="{% static 'slider/engine1/wowslider.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'slider/engine1/script.js' %}"></script>
+                    <!-- End WOWSlider.com BODY section -->
+                </div>
+            </div>
+        </div>
+        <div class="gap"></div>
+        <div class="why_us">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-12 text-center why_us_title"><span>Why Use?</span><hr /></div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 why_us_content"><span>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            </span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center who_title"><span>Who are you?</span><hr /></div>                            
+                        </div>
+                        <div class="row who_content">
+                            <div class="col-md-6 col-6 text-center"><div class="shopkeeper" id="store_login">I have a store</div></div>
+                            <div class="col-md-6 col-6 text-center"><div class="buyer">I am a buyer</div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gap_2"></div>
+
+        <div class="findmeon">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-12 text-center find_us_title"><span>Find us on</span><hr /></div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 find_us_content"><span>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            </span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="col-md-2 col-2 website"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                                <div class="col-md-2 col-2 desktop"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                                <div class="col-md-2 col-2 mobile"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gap_3"></div>
+
+        <div class="findmeon">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-12 text-center find_us_title"><span>Contact With Me</span><hr /></div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 find_us_content"><span>
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            </span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="row form">
+                            <div class="col col-md-12 col-12">
+                                <input type="text" name="" class="mandatory" placeholder="Full Name *">
+                            </div>
+                            <div class="col col-md-4 col-4">
+                                <input type="text" name="" class="mandatory" placeholder="Email Id *">
+                            </div>
+                            <div class="col col-md-4 col-4">
+                                <input type="text" name="" placeholder="Phone No. (+91 9874563210)">
+                            </div>
+                            <div class="col col-md-4 col-4">
+                                <input type="text" name="" class="mandatory" placeholder="Pin Code *">
+                            </div>
+                            <div class="col col-md-12 col-12">
+                                <!-- <input type="text" name="" placeholder=""> -->
+                                <textarea placeholder="Write your message:"></textarea>
+                            </div>
+                            <div class="col col-md-5 col-5 verify">
+                                <span>Error Message</span>
+                            </div>
+                            <div class="col col-md-2 col-2">
+                                <button>Send</button>
+                            </div>
+                            <div class="col col-md-5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gap_4"></div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-6 copyright">
+                        <span>&copy; 2020. All rights reserve.</span>
+                    </div>
+                    <div class="col-md-6 col-6 develop">
+                        <span>Design & developed by <a href="javascript:void(0);">Subhajit Dey</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $("#store_login").on('click', function(){
+                const port = window.location.port;
+                const protocol = window.location.protocol;
+                const host = window.location.hostname;
+                window.location.assign(protocol+"//"+host+":"+port+"/login");
+            });
+        </script>
+
+    </body>
+</html>

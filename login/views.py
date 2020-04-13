@@ -3,6 +3,10 @@ from django.http import HttpResponse
 from django.views.generic import View, TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 import requests
 
+from django.contrib.auth import logout
+
+from django.conf import settings
+
 # Create your views here.
 '''
 def index(request):
@@ -12,9 +16,12 @@ def index(request):
 def check_login(request):
 	return HttpResponse("Test")
 '''
-class IndexView(View):
-	def get(seld, request):
-		return HttpResponse("Landing page comming soon")
+class IndexView(TemplateView):
+	template_name = 'index.html'
+
+	def get(self, request):
+		# return HttpResponse("Landing page comming soon")
+		return render(request,"index.html",{"BASE_URL":settings.BASE_URL})
 
 class LoginView(TemplateView):
 	template_name = 'user/login.html'
@@ -35,7 +42,7 @@ class CheckLogin(View):
 				'password':password
 			}
 			# response = requests.post('http://127.0.0.1:8000/api/login', data = data)
-			response = requests.post('http://127.0.0.1:8000/api/method/check-login/', data = data)
+			response = requests.post(settings.BASE_URL+'api/method/check-login/', data = data)
 			# print (request.session['reset_user'])
 			# print (response.json())
 			if response.json() == 0:
@@ -46,6 +53,9 @@ class CheckLogin(View):
 				request.session['reset_user'] = user_id
 				request.session.set_expiry(0)
 				raise Exception("resetpassword")
+			request.session['loged_in_user'] = user_id
+			request.session.set_expiry(0)
+			request.session.modified = True
 			return HttpResponse("Success")
 		except Exception as e:
 			# print ("Error Message: "+str(e))
@@ -91,3 +101,11 @@ class ResetPwd(TemplateView):
 		response = requests.patch('http://127.0.0.1:8000/api/method/reset-password/', data = data)
 		# status_code = response.json()['status_code']
 		return HttpResponse(response.json()['status_code']);
+
+class LogoutView(TemplateView):
+	# template_name = 'user/login.html'
+
+	def get(self, request):
+		del request.session['loged_in_user']
+		logout(request)
+		return redirect("login")

@@ -9,8 +9,14 @@ from rest_framework import status
 from login.models import LoginDetail, AccountStatus, ShopKeeperAccount
 from . apiserializer import LoginDetailSerializer
 from . password_hash import *
+from .naming_series import ImageName
+
+from item.models import Product, ProductQtyType
+from all_image.models import AllImage
 
 from django.db import connection
+
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
@@ -91,3 +97,60 @@ class ResetPassword(APIView):
 				return Response({"status_code":0,"status_msg":"Something was wrong!"})
 		except Exception as e:
 			return e
+
+class GetLoginName(APIView):
+	def get(self, request):
+		# print (self.request.session.get('login_user'))
+		# data11 = request.data
+		email_id = request.data.get('email_id')
+		name = ShopKeeperAccount.objects.values_list('first_name','middle_name','last_name').filter(email_id=email_id)[0]
+		full_name = name[0]+" "+name[1]+" "+name[2]
+		return Response({"full_name":full_name})
+
+class InsertProduct(APIView):
+	def post(self, request):
+		'''
+		myfile = request.FILES['upload_product_image']
+		fs = FileSystemStorage()
+		filename = fs.save("product/sadsad"+myfile.name, myfile)
+		uploaded_file_url = fs.url(filename)
+		print (uploaded_file_url)
+		'''
+		# image = request.POST.get('')
+		# print (request.data)
+
+		product_name = request.POST.get('product_name')
+		quantity_type = request.POST.get('quantity_type')
+		quantity = request.POST.get('quantity')
+		price = request.POST.get('price')
+		product_img_name = request.POST.get('product_img_name')
+		product_img_data = request.POST.get('product_img_data')
+		product_added_by = request.POST.get('product_added_by')
+
+		status = AccountStatus.objects.get(status_name='Active')
+		# print (status.status_id)
+		product_type = ProductQtyType.objects.get(qty_type_name=quantity_type)
+
+		added_by = ShopKeeperAccount.objects.get(email_id=product_added_by)
+
+		product = Product()
+		# product.product_id = 'PROD-2020-0001'
+		product.product_name = product_name
+		product.product_qty_type = product_type
+		product.product_qty = quantity
+		product.product_price = price
+		product.status = status
+		product.added_by = added_by
+		product.save()
+
+		if product_img_data != None:
+			image_name = ImageName(image_type='PROD')+product_img_name
+
+			product_img = AllImage()
+			product_img.image_name = image_name
+			product_img.image_data = product_img_data
+			product_img.parent_type = "product"
+			product_img.parent_id = product.product_id
+			product_img.save()
+
+		return Response({"message":"Product inserted", "status_code":1}, status=200)

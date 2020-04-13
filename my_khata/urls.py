@@ -24,6 +24,9 @@ urlpatterns = [
     path('login/', views.LoginView.as_view(), name="login"),
     path('my-khata/', include('login.urls')),
     path('my-khata/dashboard/', include('dashboard.urls')),
+    path('my-khata/customer/', include('customer.urls')),
+    path('my-khata/item/', include('item.urls')),
+    path('logout/', views.LogoutView.as_view(), name="logout"),
 
     # path('api/login',apiviews.LoginCredentialCheck.as_view()),
 

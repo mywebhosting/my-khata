@@ -88,7 +88,7 @@ class check_login_credential{
 		let has_password = has_obj.HasPassword(password);
 		let key = $('input[name=csrfmiddlewaretoken]').val();
 		$.ajax({
-			url:"http://127.0.0.1:8000/my-khata/check-login/",
+			url:this.host+"/my-khata/check-login/",
 			method:"POST",
 			data:{
 				'csrfmiddlewaretoken': key,
@@ -137,7 +137,7 @@ class check_login_credential{
 		else if(resp.status_code === 3){
 			$(".message").text(resp.status);
 			$(".message").show();
-			$(".message").removeClass('red').removeClass('green').addClass('blue');
+			$(".message").removeClass('red').removeClass('green').addClass('yellow');
 		}
 		else if(resp.status_code === 4){
 			$(".message").text(resp.status);

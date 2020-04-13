@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,"template")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
+MEDIA_DIR = os.path.join(BASE_DIR, "media")
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +28,7 @@ SECRET_KEY = '!zbzr51xglq_483dd)h53ecgn*2kdf-5-+^)2h@as1_0tl#vbl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.2.12', '127.0.0.1']
 
 
 # Application definition
@@ -39,8 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'all_image',
     'api',
     'login',
+    'customer',
+    'item',
     'rest_framework',
     'corsheaders',
 ]
@@ -130,3 +134,8 @@ STATICFILES_DIRS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/' 
+
+BASE_URL = "http://127.0.0.1:8000/"
